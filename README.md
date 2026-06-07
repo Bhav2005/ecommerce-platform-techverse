@@ -2,13 +2,11 @@
 
 A full stack ecommerce web application built with React.js, Node.js, Express.js, and MongoDB — featuring a complete shopping experience from product browsing to secure payment processing via Stripe.
 
----
 
 ## 🚀 Live Demo
 
-> Coming soon / [Add your deployed link here]
+> Coming soon 
 
----
 
 ## 📋 Features
 
@@ -19,8 +17,6 @@ A full stack ecommerce web application built with React.js, Node.js, Express.js,
 - 💳 **Payment with Stripe** — Safe and seamless online payment integration
 - 📦 **Order Tracking** — Track your order status after purchase
 - 🛠️ **Admin Dashboard** — Manage products, orders, and users from one place
-
----
 
 ## 🧰 Tech Stack
 
@@ -85,14 +81,12 @@ JWT_SECRET=your_jwt_secret
 PORT=5000
 ```
 
----
 
-## 🙋‍♀️ Author
+## 🙋‍♀️ Author Me
 
 **Bhavana**
 - GitHub: [@Bhav2005](https://github.com/Bhav2005)
 
----
 
 ## 📄 License
 
