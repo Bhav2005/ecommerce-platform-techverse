@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "4h8auxvgm1gaai9r3ftci",
+    "createdAt": "2026-06-02T14:01:39.549Z",
+    "userId": "m4vkcpqy4jfacwrhl8hm7",
+    "customerName": "customer_92435",
+    "customerEmail": "customer_92435@apex.com",
+    "items": [
+      {
+        "productId": "wc5xb3f3vpjgh48697o98w",
+        "name": "Quantum Mechanical Keyboard V92435",
+        "price": 150,
+        "quantity": 2,
+        "image": "https://example.com/quantum.jpg"
+      }
+    ],
+    "subtotal": 300,
+    "discount": 60,
+    "total": 240,
+    "shippingAddress": {
+      "address": "77 Cyberpunk Boulevard",
+      "city": "Neo Tokyo",
+      "postalCode": "100-001",
+      "country": "Japan"
+    },
+    "paymentMethod": "card",
+    "paymentStatus": "paid",
+    "orderStatus": "processing",
+    "paymentIntentId": "mock_pi_rfh7ozw1u3",
+    "updatedAt": "2026-06-02T14:01:39.556Z"
+  },
+  {
+    "_id": "4qmsp7cs7vx5syvfyvhilj",
+    "createdAt": "2026-06-02T14:01:57.176Z",
+    "userId": "5bkov3ebe1j5e667fx60g4",
+    "customerName": "customer_40989",
+    "customerEmail": "customer_40989@apex.com",
+    "items": [
+      {
+        "productId": "5upefdnajzrlqriazktar",
+        "name": "Quantum Mechanical Keyboard V40989",
+        "price": 150,
+        "quantity": 2,
+        "image": "https://example.com/quantum.jpg"
+      }
+    ],
+    "subtotal": 300,
+    "discount": 60,
+    "total": 240,
+    "shippingAddress": {
+      "address": "77 Cyberpunk Boulevard",
+      "city": "Neo Tokyo",
+      "postalCode": "100-001",
+      "country": "Japan"
+    },
+    "paymentMethod": "card",
+    "paymentStatus": "paid",
+    "orderStatus": "processing",
+    "paymentIntentId": "mock_pi_qtp5cmqj6",
+    "updatedAt": "2026-06-02T14:01:57.182Z"
+  },
+  {
+    "_id": "0qk695bm935f5m1zmcrzb6",
+    "createdAt": "2026-06-02T14:18:50.290Z",
+    "userId": "g20v7kfec5dfpmxnd5hq1f",
+    "customerName": "bhavana",
+    "customerEmail": "bhavana@gmail.com",
+    "items": [
+      {
+        "productId": "p3",
+        "name": "NeoType Mechanical Keyboard",
+        "price": 89.99,
+        "quantity": 3,
+        "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=60"
+      }
+    ],
+    "subtotal": 269.96999999999997,
+    "discount": 0,
+    "total": 269.97,
+    "shippingAddress": {
+      "address": "no 2/675 vel nagar tcl thiruvallur",
+      "city": "thiruvallur",
+      "postalCode": "602002",
+      "country": "india"
+    },
+    "paymentMethod": "upi",
+    "paymentStatus": "paid",
+    "orderStatus": "processing",
+    "paymentIntentId": "mock_pi_cuv71gmye5",
+    "updatedAt": "2026-06-02T14:18:52.324Z"
+  }
+]

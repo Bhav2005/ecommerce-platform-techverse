@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "u1_admin",
+    "username": "Store Manager",
+    "email": "admin@shop.com",
+    "password": "$2a$10$vwYYNsM9uxxZ2px.ELM9TuXVK3E5ol6xUnRXPv7RPxNt43ov8kLpu",
+    "role": "admin",
+    "createdAt": "2026-06-02T13:58:24.162Z"
+  },
+  {
+    "_id": "u2_customer",
+    "username": "Jane Doe",
+    "email": "customer@shop.com",
+    "password": "$2a$10$JhG3GA7p4P8PJ893GOTdQeD7ubRx8GFUvMJbEBt0ylsjKLhdyg1Dy",
+    "role": "customer",
+    "createdAt": "2026-06-02T13:58:24.163Z"
+  },
+  {
+    "_id": "93ax7wpx0jgcb6m74qu43",
+    "createdAt": "2026-06-02T14:01:16.976Z",
+    "username": "admin_66733",
+    "email": "admin_66733@apex.com",
+    "password": "$2a$10$BhurYK3aWc9QQS53EC/b3uhPQXnIh.RqVGxtkdmyY6/cMR7T/hKpe",
+    "role": "customer"
+  },
+  {
+    "_id": "biz6n0sv0qr3f3jxhew6",
+    "createdAt": "2026-06-02T14:01:17.105Z",
+    "username": "customer_66733",
+    "email": "customer_66733@apex.com",
+    "password": "$2a$10$VM5FzVbm4oSR7ydTveBwa.KdcSrHqwiOfEGTMC6WCykXbrW8cpe0W",
+    "role": "customer"
+  },
+  {
+    "_id": "otz02cdrqsdi1bcse7fdr",
+    "createdAt": "2026-06-02T14:01:39.420Z",
+    "username": "admin_92435",
+    "email": "admin_92435@apex.com",
+    "password": "$2a$10$K2h7fkYperoJFQqkS2N4Z.StgP63ZreP0guBWPVOlxSITQW.vy15.",
+    "role": "admin"
+  },
+  {
+    "_id": "m4vkcpqy4jfacwrhl8hm7",
+    "createdAt": "2026-06-02T14:01:39.521Z",
+    "username": "customer_92435",
+    "email": "customer_92435@apex.com",
+    "password": "$2a$10$CaPXjKmdbuR/8a7aEkd/oeufXsA/luaWC7gFP/obIsuqV0yYWDpxC",
+    "role": "customer"
+  },
+  {
+    "_id": "x6ao8rcwezdw6p803zsqqe",
+    "createdAt": "2026-06-02T14:01:57.060Z",
+    "username": "admin_40989",
+    "email": "admin_40989@apex.com",
+    "password": "$2a$10$laP5vMi/2UGJ6Q4FQn.Q2O1/2fAIkmXk0yhf8ylQ5IZ3EuH.fSyO6",
+    "role": "admin"
+  },
+  {
+    "_id": "5bkov3ebe1j5e667fx60g4",
+    "createdAt": "2026-06-02T14:01:57.153Z",
+    "username": "customer_40989",
+    "email": "customer_40989@apex.com",
+    "password": "$2a$10$1uz7AJZkwz4PSJV.dL3JaeBExfaK236kmQiGT4hixtylGGumHoll6",
+    "role": "customer"
+  },
+  {
+    "_id": "g20v7kfec5dfpmxnd5hq1f",
+    "createdAt": "2026-06-02T14:17:18.953Z",
+    "username": "bhavana",
+    "email": "bhavana@gmail.com",
+    "password": "$2a$10$23UykHqLsoRMyoT93YPU0uzyYxocJgQpO8Y1rhHI7x4iX1Qwu.wS6",
+    "role": "customer"
+  }
+]

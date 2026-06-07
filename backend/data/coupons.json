@@ -1,0 +1,36 @@
+[
+  {
+    "_id": "c1",
+    "code": "WELCOME10",
+    "discountType": "percentage",
+    "discountValue": 10,
+    "active": true,
+    "expiryDate": "2026-07-02T13:58:24.163Z"
+  },
+  {
+    "_id": "c2",
+    "code": "FLAT20",
+    "discountType": "fixed",
+    "discountValue": 20,
+    "active": true,
+    "expiryDate": "2026-07-02T13:58:24.163Z"
+  },
+  {
+    "_id": "h7obzbph20lvq68xmlksef",
+    "createdAt": "2026-06-02T14:01:39.538Z",
+    "code": "SAVE20_92435",
+    "discountType": "percentage",
+    "discountValue": 20,
+    "active": true,
+    "expiryDate": null
+  },
+  {
+    "_id": "neba90a0417ub5a56qire9",
+    "createdAt": "2026-06-02T14:01:57.165Z",
+    "code": "SAVE20_40989",
+    "discountType": "percentage",
+    "discountValue": 20,
+    "active": true,
+    "expiryDate": null
+  }
+]
