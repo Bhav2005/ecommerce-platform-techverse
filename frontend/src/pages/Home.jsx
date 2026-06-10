@@ -26,13 +26,14 @@ export const Home = () => {
     fetchProducts();
   }, []);
 
-  const featuredProducts = products.slice(0, 4); // Limit to top 4
+  const featuredProducts = products.slice(0, 4);
   const newArrivals = [...products]
     .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
     .slice(0, 4);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }} className="animate-fade-in">
+
       {/* Hero Section */}
       <section
         className="glass-panel"
@@ -44,8 +45,8 @@ export const Home = () => {
           alignItems: 'flex-start',
           position: 'relative',
           overflow: 'hidden',
-          background: 'linear-gradient(135deg, rgba(15, 17, 26, 0.9) 0%, rgba(99, 102, 241, 0.15) 100%)',
-          border: '1px solid rgba(99, 102, 241, 0.2)'
+          background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%)',
+          border: '1px solid rgba(99, 102, 241, 0.15)'
         }}
       >
         <span
@@ -61,9 +62,7 @@ export const Home = () => {
             lineHeight: 1.1,
             maxWidth: '700px',
             fontFamily: 'var(--font-display)',
-            background: 'linear-gradient(to right, #ffffff, #c7d2fe, #818cf8)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
+            color: '#1c1917'
           }}
         >
           Elevate Your Digital Lifestyle Experience in this new era,
@@ -91,7 +90,7 @@ export const Home = () => {
             <Link
               key={cat.name}
               to={`/search?category=${cat.name}`}
-              className="glass-panel glass-panel-hover"
+              className="glass-panel"
               style={{
                 textDecoration: 'none',
                 color: 'inherit',
@@ -101,7 +100,18 @@ export const Home = () => {
                 alignItems: 'center',
                 gap: '1rem',
                 textAlign: 'center',
-                transition: 'var(--transition-smooth)'
+                transition: 'var(--transition-smooth)',
+                background: 'white'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.background = 'rgba(99, 102, 241, 0.08)';
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.3)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.background = 'white';
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = 'var(--glass-border)';
               }}
             >
               <div
@@ -113,12 +123,11 @@ export const Home = () => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  boxShadow: '0 0 15px rgba(99, 102, 241, 0.1)'
                 }}
               >
                 {cat.icon}
               </div>
-              <h3 style={{ fontSize: '1.25rem' }}>{cat.name}</h3>
+              <h3 style={{ fontSize: '1.25rem', color: '#1c1917' }}>{cat.name}</h3>
               <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{cat.count}</span>
             </Link>
           ))}
@@ -160,12 +169,12 @@ export const Home = () => {
         }}
       >
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-          <div style={{ color: 'var(--accent-cyan)', background: 'rgba(6, 182, 212, 0.1)', padding: '0.75rem', borderRadius: 'var(--radius-sm)' }}>
+          <div style={{ color: 'var(--accent-cyan)', background: 'rgba(8, 145, 178, 0.1)', padding: '0.75rem', borderRadius: 'var(--radius-sm)' }}>
             <Truck size={24} />
           </div>
           <div>
             <h4 style={{ fontSize: '1.1rem', marginBottom: '0.25rem' }}>Priority Carrier Delivery</h4>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.5 }}>Free Express logistics on all store transactions exceeding $150.</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.5 }}>Free Express logistics on all store transactions exceeding ₹5000.</p>
           </div>
         </div>
 
@@ -180,7 +189,7 @@ export const Home = () => {
         </div>
 
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-          <div style={{ color: 'var(--secondary-color)', background: 'rgba(168, 85, 247, 0.1)', padding: '0.75rem', borderRadius: 'var(--radius-sm)' }}>
+          <div style={{ color: 'var(--secondary-color)', background: 'rgba(139, 92, 246, 0.1)', padding: '0.75rem', borderRadius: 'var(--radius-sm)' }}>
             <RefreshCw size={24} />
           </div>
           <div>
