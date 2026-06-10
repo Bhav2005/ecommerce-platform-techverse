@@ -91,7 +91,7 @@ export const Home = () => {
           padding: '2rem',
           borderRadius: 'var(--radius-md)',
           transition: 'all 0.3s ease',
-          background: hoveredCat === cat.name ? 'rgba(99, 102, 241, 0.1)' : 'white'
+          background: hoveredCat ? 'rgba(99, 102, 241, 0.06)' : 'transparent'
         }}
       >
         <h2 style={{ fontSize: '1.75rem', marginBottom: '1.5rem' }}>Shop by Category</h2>
