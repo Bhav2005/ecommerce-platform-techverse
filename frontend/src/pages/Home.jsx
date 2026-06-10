@@ -84,9 +84,9 @@ export const Home = () => {
         </h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
           {[
-            { name: 'Electronics', icon: <Laptop size={32} />, count: 'PC, LAPTOPS' },
+            { name: 'Electronics', icon: <Laptop size={32} />, count: 'PC, LAPTOPS, MONITORS' },
             { name: 'Audio', icon: <Headphones size={32} />, count: 'AIRDOPES, HEADPHONES' },
-            { name: 'Accessories', icon: <Keyboard size={32} />, count: 'PC KIT' }
+            { name: 'Accessories', icon: <Keyboard size={32} />, count: 'KEYBOARD, MOUSE, PRINTER' }
           ].map(cat => (
             <Link
               key={cat.name}

@@ -21,7 +21,7 @@ const products = [
     {
         name: "Wireless Headphones",
         description: "Premium noise-cancelling wireless headphones with 30hr battery life.",
-        price: 2999,
+        price: 3000,
         category: "Electronics",
         stock: 50,
         images: ["https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"],
@@ -30,7 +30,7 @@ const products = [
     {
         name: "Black-themed Mechanical Keyboard V92435",
         description: "Ultra-responsive clicky tactile key switches with premium keycaps.",
-        price: 2500,
+        price: 25000,
         category: "Accessories",
         stock: 8,
         images: [
@@ -40,17 +40,17 @@ const products = [
     {
         name: "GEN AI PC",
         description: "Ultra-responsive clicky tactile key switches with premium keycaps.",
-        price: 1500,
+        price: 76500,
         category: "Accessories",
         stock: 8,
         images: [
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFT55ZsY7MQWWQRbPedOR4tRcc5TfDpSzZ_w&s"],
-        rating: 4.3
+        rating: 4.5
     },
     {
         name: "Laptop Backpack",
         description: "Water-resistant backpack with USB charging port, fits 15.6 inch laptops.",
-        price: 1499,
+        price: 2000,
         category: "Bags",
         stock: 40,
         images: ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400"],
