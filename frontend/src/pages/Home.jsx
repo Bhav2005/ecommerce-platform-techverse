@@ -8,6 +8,7 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 export const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [hoveredCat, setHoveredCat] = useState(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -46,13 +47,10 @@ export const Home = () => {
           position: 'relative',
           overflow: 'hidden',
           background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%)',
-          border: '1px solid rgba(99, 102, 241, 0.15)'
+          border: '2px solid rgba(99, 102, 241, 0.4)'
         }}
       >
-        <span
-          className="badge badge-info"
-          style={{ padding: '0.4rem 1rem', fontSize: '0.85rem' }}
-        >
+        <span className="badge badge-info" style={{ padding: '0.4rem 1rem', fontSize: '0.85rem' }}>
           Special Launch Event
         </span>
         <h1
@@ -67,7 +65,16 @@ export const Home = () => {
         >
           Elevate Your Digital Lifestyle Experience in this new era,
         </h1>
-        <p style={{ color: 'var(--text-muted)', fontSize: '1.15rem', maxWidth: '600px', lineHeight: 1.6 }}>
+        <p
+          style={{
+            color: 'var(--text-muted)',
+            fontSize: '1.15rem',
+            maxWidth: '600px',
+            lineHeight: 1.6,
+            fontFamily: 'Georgia, serif',
+            fontStyle: 'italic'
+          }}
+        >
           Discover cutting-edge gadgets, designer peripherals, and premium ergonomic setups crafted for elite efficiency.
         </p>
         <Link to="/search" className="btn btn-primary" style={{ gap: '0.75rem', marginTop: '1rem', padding: '1rem 2rem' }}>
@@ -78,9 +85,7 @@ export const Home = () => {
 
       {/* Categories Section */}
       <section>
-        <h2 style={{ fontSize: '1.75rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          Shop by Category
-        </h2>
+        <h2 style={{ fontSize: '1.75rem', marginBottom: '1.5rem' }}>Shop by Category</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
           {[
             { name: 'Electronics', icon: <Laptop size={32} />, count: 'PC, LAPTOPS, MONITORS' },
@@ -100,29 +105,25 @@ export const Home = () => {
                 alignItems: 'center',
                 gap: '1rem',
                 textAlign: 'center',
-                transition: 'var(--transition-smooth)',
-                background: 'white'
+                transition: 'all 0.3s ease',
+                background: hoveredCat === cat.name ? 'rgba(99, 102, 241, 0.08)' : 'white',
+                transform: hoveredCat === cat.name ? 'translateY(-4px)' : 'translateY(0)',
+                borderColor: hoveredCat === cat.name ? 'rgba(99, 102, 241, 0.4)' : 'var(--glass-border)',
+                boxShadow: hoveredCat === cat.name ? '0 8px 30px rgba(99, 102, 241, 0.15)' : '0 4px 20px rgba(0,0,0,0.08)'
               }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.background = 'rgba(99, 102, 241, 0.08)';
-                e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.3)';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.background = 'white';
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'var(--glass-border)';
-              }}
+              onMouseEnter={() => setHoveredCat(cat.name)}
+              onMouseLeave={() => setHoveredCat(null)}
             >
               <div
                 style={{
                   color: 'var(--primary-color)',
-                  background: 'rgba(99, 102, 241, 0.1)',
+                  background: hoveredCat === cat.name ? 'rgba(99, 102, 241, 0.15)' : 'rgba(99, 102, 241, 0.1)',
                   padding: '1rem',
                   borderRadius: '50%',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  transition: 'all 0.3s ease'
                 }}
               >
                 {cat.icon}
@@ -139,11 +140,9 @@ export const Home = () => {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1.5rem' }}>
           <h2 style={{ fontSize: '1.75rem' }}>Featured Creations</h2>
           <Link to="/search" style={{ color: 'var(--primary-color)', textDecoration: 'none', fontSize: '0.95rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-            View All
-            <ArrowRight size={14} />
+            View All <ArrowRight size={14} />
           </Link>
         </div>
-
         {loading ? (
           <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>Syncing inventory catalog...</div>
         ) : featuredProducts.length === 0 ? (
@@ -177,7 +176,6 @@ export const Home = () => {
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.5 }}>Free Express logistics on all store transactions exceeding ₹5000.</p>
           </div>
         </div>
-
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
           <div style={{ color: 'var(--primary-color)', background: 'rgba(99, 102, 241, 0.1)', padding: '0.75rem', borderRadius: 'var(--radius-sm)' }}>
             <ShieldCheck size={24} />
@@ -187,7 +185,6 @@ export const Home = () => {
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.5 }}>Stripe secure gateway and encrypted tokenization safeguards your data.</p>
           </div>
         </div>
-
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
           <div style={{ color: 'var(--secondary-color)', background: 'rgba(139, 92, 246, 0.1)', padding: '0.75rem', borderRadius: 'var(--radius-sm)' }}>
             <RefreshCw size={24} />
