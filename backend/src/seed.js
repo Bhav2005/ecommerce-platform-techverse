@@ -28,12 +28,23 @@ const products = [
         rating: 4.5
     },
     {
-        name: "Running Shoes",
-        description: "Lightweight and comfortable running shoes for all terrains.",
-        price: 1999,
-        category: "Footwear",
-        stock: 30,
-        images: ["https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"],
+        name: "Black-themed Mechanical Keyboard V92435",
+        description: "Ultra-responsive clicky tactile key switches with premium keycaps.",
+        price: 2500,
+        category: "Accessories",
+        stock: 8,
+        images: [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ553Nhs3qFJquA21pTlM9gIPEnzTwcKJhjog&s"],
+        rating: 3.8,
+    },
+    {
+        name: "GEN AI PC",
+        description: "Ultra-responsive clicky tactile key switches with premium keycaps.",
+        price: 1500,
+        category: "Accessories",
+        stock: 8,
+        images: [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFT55ZsY7MQWWQRbPedOR4tRcc5TfDpSzZ_w&s"],
         rating: 4.3
     },
     {
@@ -53,15 +64,6 @@ const products = [
         stock: 25,
         images: ["https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"],
         rating: 4.6
-    },
-    {
-        name: "Sunglasses",
-        description: "UV400 polarized sunglasses with lightweight frame.",
-        price: 899,
-        category: "Accessories",
-        stock: 60,
-        images: ["https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400"],
-        rating: 4.1
     },
     {
         name: "Mechanical Keyboard",

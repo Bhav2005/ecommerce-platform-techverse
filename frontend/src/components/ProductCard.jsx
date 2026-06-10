@@ -79,7 +79,7 @@ export const ProductCard = ({ product }) => {
           >
             {product.name}
           </h3>
-          
+
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.2rem', margin: '0.1rem 0' }}>
             {[...Array(5)].map((_, i) => (
               <Star
@@ -102,7 +102,7 @@ export const ProductCard = ({ product }) => {
               marginTop: '0.2rem'
             }}
           >
-            ${product.price.toFixed(2)}
+            ₹{product.price.toFixed(2)}
           </span>
         </div>
       </Link>
