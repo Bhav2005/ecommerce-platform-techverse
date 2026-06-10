@@ -9,6 +9,8 @@ export const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [hoveredCat, setHoveredCat] = useState(null);
+  const [hoveredFeatured, setHoveredFeatured] = useState(false);
+  const [hoveredArrivals, setHoveredArrivals] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -84,7 +86,14 @@ export const Home = () => {
       </section>
 
       {/* Categories Section */}
-      <section>
+      <section
+        style={{
+          padding: '2rem',
+          borderRadius: 'var(--radius-md)',
+          transition: 'all 0.3s ease',
+          background: hoveredCat ? 'rgba(99, 102, 241, 0.06)' : 'transparent'
+        }}
+      >
         <h2 style={{ fontSize: '1.75rem', marginBottom: '1.5rem' }}>Shop by Category</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
           {[
@@ -106,10 +115,7 @@ export const Home = () => {
                 gap: '1rem',
                 textAlign: 'center',
                 transition: 'all 0.3s ease',
-                background: hoveredCat === cat.name ? 'rgba(99, 102, 241, 0.08)' : 'white',
-                transform: hoveredCat === cat.name ? 'translateY(-4px)' : 'translateY(0)',
-                borderColor: hoveredCat === cat.name ? 'rgba(99, 102, 241, 0.4)' : 'var(--glass-border)',
-                boxShadow: hoveredCat === cat.name ? '0 8px 30px rgba(99, 102, 241, 0.15)' : '0 4px 20px rgba(0,0,0,0.08)'
+                background: 'white',
               }}
               onMouseEnter={() => setHoveredCat(cat.name)}
               onMouseLeave={() => setHoveredCat(null)}
@@ -117,13 +123,12 @@ export const Home = () => {
               <div
                 style={{
                   color: 'var(--primary-color)',
-                  background: hoveredCat === cat.name ? 'rgba(99, 102, 241, 0.15)' : 'rgba(99, 102, 241, 0.1)',
+                  background: 'rgba(99, 102, 241, 0.1)',
                   padding: '1rem',
                   borderRadius: '50%',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  transition: 'all 0.3s ease'
                 }}
               >
                 {cat.icon}
@@ -136,7 +141,16 @@ export const Home = () => {
       </section>
 
       {/* Featured Products */}
-      <section>
+      <section
+        style={{
+          padding: '2rem',
+          borderRadius: 'var(--radius-md)',
+          transition: 'all 0.3s ease',
+          background: hoveredFeatured ? 'rgba(99, 102, 241, 0.06)' : 'transparent'
+        }}
+        onMouseEnter={() => setHoveredFeatured(true)}
+        onMouseLeave={() => setHoveredFeatured(false)}
+      >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1.5rem' }}>
           <h2 style={{ fontSize: '1.75rem' }}>Featured Creations</h2>
           <Link to="/search" style={{ color: 'var(--primary-color)', textDecoration: 'none', fontSize: '0.95rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
@@ -197,7 +211,17 @@ export const Home = () => {
       </section>
 
       {/* New Arrivals */}
-      <section style={{ marginBottom: '2rem' }}>
+      <section
+        style={{
+          marginBottom: '2rem',
+          padding: '2rem',
+          borderRadius: 'var(--radius-md)',
+          transition: 'all 0.3s ease',
+          background: hoveredArrivals ? 'rgba(99, 102, 241, 0.06)' : 'transparent'
+        }}
+        onMouseEnter={() => setHoveredArrivals(true)}
+        onMouseLeave={() => setHoveredArrivals(false)}
+      >
         <h2 style={{ fontSize: '1.75rem', marginBottom: '1.5rem' }}>New Additions</h2>
         {loading ? (
           <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>Syncing arrivals...</div>
@@ -211,6 +235,7 @@ export const Home = () => {
           </div>
         )}
       </section>
+
     </div>
   );
 };
