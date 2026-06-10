@@ -85,10 +85,10 @@ export const Cart = () => {
                   {item.name}
                 </Link>
                 <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                  Unit Price: ${item.price.toFixed(2)}
+                  Unit Price: ₹{item.price.toFixed(2)}
                 </span>
                 <span style={{ fontSize: '0.8rem', color: 'var(--accent-cyan)' }}>
-                  Total: ${(item.price * item.quantity).toFixed(2)}
+                  Total: ₹{(item.price * item.quantity).toFixed(2)}
                 </span>
               </div>
 
@@ -133,7 +133,7 @@ export const Cart = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--text-muted)' }}>
                 <span>Subtotal</span>
-                <span>${subtotal.toFixed(2)}</span>
+                <span>₹{subtotal.toFixed(2)}</span>
               </div>
 
               {coupon && (
@@ -142,7 +142,7 @@ export const Cart = () => {
                     <Percent size={14} />
                     Coupon Applied ({coupon.code})
                   </span>
-                  <span>-${discount.toFixed(2)}</span>
+                  <span>-₹{discount.toFixed(2)}</span>
                 </div>
               )}
 
@@ -153,7 +153,7 @@ export const Cart = () => {
 
               <div style={{ borderTop: '1px solid var(--glass-border)', marginTop: '0.5rem', paddingTop: '1rem', display: 'flex', justifyContent: 'space-between', fontSize: '1.3rem', fontWeight: 'bold' }}>
                 <span>Total</span>
-                <span style={{ color: 'var(--accent-cyan)' }}>${total.toFixed(2)}</span>
+                <span style={{ color: 'var(--accent-cyan)' }}>₹{total.toFixed(2)}</span>
               </div>
             </div>
 
@@ -209,7 +209,10 @@ export const Cart = () => {
           </div>
 
           <div style={{ textAlign: 'center' }}>
-            <Link to="/search" style={{ color: 'var(--text-muted)', fontSize: '0.9rem', textDecoration: 'none' }} onMouseOver={(e) => e.target.style.color = 'var(--text-main)'} onMouseOut={(e) => e.target.style.color = 'var(--text-muted)'}>
+            <Link to="/search" style={{ color: 'var(--text-muted)', fontSize: '0.9rem', textDecoration: 'none' }}
+              onMouseOver={(e) => e.target.style.color = 'var(--text-main)'}
+              onMouseOut={(e) => e.target.style.color = 'var(--text-muted)'}
+            >
               Continue Discovering Products
             </Link>
           </div>
